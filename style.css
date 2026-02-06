@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Sour Gummy";
+  background: linear-gradient(135deg, #f15f81, #9ce7f1);
+  color: #222;
+}
+
+.card {
+  width: min(550px, 92vw);
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
+}
+
+.sub {
+  margin: 0 0 18px;
+  opacity: 0.8;
+}
+
+/* ✅ Side-by-side layout (no overlap on load) */
+.buttons-area {
+  position: relative;         
+  height: 160px;
+  margin: 20px auto 6px;
+
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+  gap: 32px;
+  
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 21px;
+  border-radius: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+  user-select: none;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.no {
+  background: #ffffff;
+  color: #333;
+  border: 2px solid rgba(0,0,0,0.12);
+  font-size: 1.5rem;
+}
+
+.no.floating {
+  position: absolute;
+}
+
+#yesBtn {
+  position: relative;
+  z-index: 2;
+}
